@@ -1,19 +1,21 @@
 <html>
     <head>
         <style>
-            div{
+            .div{
                 width: 100px;
                 height: 100px;
-                background-color: burlywood;
+                background-color: red;
                 position: relative;
                 animation-name: example;
                 animation-duration: 4s;
                 animation-delay: 1s;
                 animation-iteration-count: 5;
-                animation-direction: reverse;
+                animation-direction: alternate;
                 
             }
             @keyframes example {
+                
+
                 0%{background-color: purple;left: 0px;top: 0px;}
                 25%{background-color: chartreuse;left: 200px;top:0px;}
                 50%{background-color: yellow;left: 200px;top:200px;}
@@ -26,9 +28,10 @@
         </style>
     </head>
     <body>
-        <p><b>NOTE:</b>This is an example</p>
+        <img src="R.jpg" width="460" height="345" class="div">
+        <!--<p><b>NOTE:</b>This is an example</p>
         <div></div>
-        <p><b>NOTE:</b>This is not an example</p>
+        <p><b>NOTE:</b>This is not an example</p>-->
 
     </body>
 </html>
