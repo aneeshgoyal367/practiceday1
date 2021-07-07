@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geolocation</title>
+    </head>
+    <body>
+        <h1>Hello, Lets trace the location.</h1>
+        <button onclick="getlocation()">Get Location</button>
+        <div id="output"></div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+            var x=document.getElementById('output')
+           //x.innerHTML="Here is output"
+           function getlocation(){
+               if(navigator.geolocation){
+            //x.innerHTML="Supporting"
+                  navigator.geolocation.getCurrentPosition(showPosition,showError);
+               } else{
+                   x.innerHTML="Not Supporting";
+               }
+           }
+           function showPosition(position){
+               //x.innerHTML= "latitude: "+position.coords.latitude;
+               // x.innerHTML+="<br/>"
+               //x.innerHTML+="longitude: "+position.coords.longitude;
+               var locAPI = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.coords.latitude+","+position.coords.longitude;//&sensors="true";
+              
+              
+               $.get({
+                   url : locAPI,
+                   success : function(data){
+                       console.log(data);
+                       x.innerHTML=data.results[0].address_components[4].long_name+",";
+                       x.innerHTML+=data.results[0].address_components[5].long_name+",";
+                       x.innerHTML+=data.results[0].address_components[6].long_name;
+                   }
+               });
+               function showError(){
+               switch(error.code){
+                   case error.PERMISSION_DENIED:
+                   x.innerHTML="code: "+error.code+"User dont want to share location";
+                   break;
+
+                   case error.PERMISSION_DENIED:
+                   x.innerHTML="code: "+error.code+"User location not available";
+                   break;
+
+                   case error.PERMISSION_DENIED:
+                   x.innerHTML="code: "+error.code+"Timeout";
+                   break;
+
+                   case error.PERMISSION_DENIED:
+                   x.innerHTML="code: "+error.code+"there is something wrong";
+                   break;
+               }
+            }
+        }
+
+        </script>
+    </body>
+</html>
