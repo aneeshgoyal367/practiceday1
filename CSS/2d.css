@@ -1,0 +1,12 @@
+div{
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    -ms-transform: translate(50px,100px);
+    transform: translate(50px,100px);
+}
+div#myDiv{
+    -ms-transform: rotate(-50deg);
+    transform: rotate(-50deg);
+}
