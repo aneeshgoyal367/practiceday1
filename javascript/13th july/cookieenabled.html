@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Detect if browser is online or offline</title>
+    </head>
+    <body>
+        <script>
+            function checkCookieEnabled(){
+                if(navigator.cookieEnabled){
+                    alert("Cookies is enabled.");
+                } else
+                alert("Cookies is not enabled.");
+            }
+        </script>
+        <button type="button" onclick="checkCookieEnabled();">Check Connection Status</button>
+    </body>
+</html>

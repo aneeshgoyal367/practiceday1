@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Get width and height excluding the scrollbars</title>
+        <style>
+            body{
+                min-height: 200px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <script>
+            function windowSize(){
+                var w= document.documentElement.clientWidth;
+                var h = document.documentElement.clientHeight;
+                alert("Width: " + w + " ," + "Height"+h);
+            }
+        </script>
+        <button type="button" onclick="windowSize();">Get window Size</button>
+    </body>
+</html>

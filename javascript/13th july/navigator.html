@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Detect if browser is online or offline</title>
+    </head>
+    <body>
+        <script>
+            function checkConnectionStatus(){
+                if(navigator.online){
+                    alert("Application is online.");
+                } else
+                alert("Application is offline.");
+            }
+        </script>
+        <button type="button" onclick="checkConnectionStatus();">Check Connection Status</button>
+    </body>
+</html>

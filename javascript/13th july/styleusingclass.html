@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Replace CSS classes on an element</title>
+        <style>
+            .highlight{
+                background: yellow;
+
+            }
+            .disabled{
+                background: green;
+                opacity: 0.7;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="intro" class="disabled">Something IMportant</div>
+        <script>
+              var elem=document.getElementById("intro");
+              elem.className="note";
+              elem.className+="highlight";
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h2>Form Validation</h2>
+        <p>Enter numbers less than 10:</p>
+        <input id="numb">
+        <button type="button" onclick="myFunction()">Submit</button>
+
+        <p id="demo"></p>
+        <script>
+            function myFunction()
+            { ////get the value of the input field by the id="numb"
+                     let x=document.getElementById("numb").value; ///if x is not a number or less than one or greater than 10
+                     let text;
+                     if(isNaN(x) || x<1 || x>10){
+                         text="Input not valid";
+                     }
+                     else{
+                     text="Input OK";
+            }
+            document.getElementById("demo").innerHTML = text; ///jo bhi form banaya hai usme dalo isko
+        }
+        </script>
+    </body>
+</html>
