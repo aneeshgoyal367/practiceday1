@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="myBtn">Click Me</button>
+        <script>
+            var btn = document.getElementById("myBtn");
+
+            function sayhello(){
+                alert("hi, how are u");
+            }
+            function sethovercolor(){
+                btn.style.background="blue";
+            }
+            function setNormalColor(){
+                btn.style.background = " ";
+            }
+            btn.addEventListener("click" , sayhello);
+            btn.addEventListener("mouseover", sethovercolor);
+            btn.addEventListener("mouseout", setNormalColor);
+            </script>
+            </body>
+            </html>
